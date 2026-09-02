@@ -1,6 +1,7 @@
 package com.hachi.api.model;
 
 /**
+
  * Classe Model de Usuário
  *
  * @author Marley de S. Santos - <a href="https://github.com/MarleyS439">@MarleyS439</a>
@@ -13,11 +14,8 @@ public class Usuario {
     // ID
     private Integer id;
 
-    // Nome
-    private String nome;
-
-    // Sobrenome
-    private String sobrenome;
+    // Nome completo
+    private String nomeCompleto;
 
     // E-mail
     private String email;
@@ -33,14 +31,12 @@ public class Usuario {
     /**
      * Construtor
      *
-     * @param nome Nome
-     * @param sobrenome Sobrenome
+     * @param nomeCompleto Nome completo
      * @param email E-mail
      * @param senha Senha
      * */
-    public Usuario(String nome, String sobrenome, String email, String senha) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
+    public Usuario(String nomeCompleto, String email, String senha) {
+        this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
     }
@@ -49,15 +45,13 @@ public class Usuario {
      * Construtor
      *
      * @param id ID
-     * @param nome Nome
-     * @param sobrenome Sobrenome
+     * @param nomeCompleto Nome completo
      * @param email E-mail
      * @param senha Senha
      * */
-    public Usuario(Integer id, String nome, String sobrenome, String email, String senha) {
+    public Usuario(Integer id, String nomeCompleto, String email, String senha) {
         this.id = id;
-        this.nome = nome;
-        this.sobrenome = sobrenome;
+        this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
     }
@@ -79,35 +73,19 @@ public class Usuario {
     }
 
     /**
-     * Obtém o nome do usuário
+     * Obtém o nome completo do usuário
      * */
-    public String getNome() {
-        return this.nome;
+    public String getNomeCompleto() {
+        return this.nomeCompleto;
     }
 
     /**
-     * Define o nome do usuário
+     * Define o nome completo do usuário
      *
-     * @param nome Nome do usuário a ser definido
+     * @param nomeCompleto Nome completo do usuário a ser definido
      * */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
-     * Obtém o sobrenome
-     * */
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    /**
-     * Define o sobrenome
-     *
-     * @param sobrenome Sobrenome
-     * */
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
     /**
@@ -151,8 +129,7 @@ public class Usuario {
     public String toString() {
         return "Usuario{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
+                ", nomeCompleto='" + nomeCompleto + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
                 '}';
