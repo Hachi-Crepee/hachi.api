@@ -1,7 +1,7 @@
 CREATE TABLE usuario
 (
     idUsuario INT AUTO_INCREMENT PRIMARY KEY,
-    nome      VARCHAR(100) NOT NULL,
+    nomeCompleto      VARCHAR(100) NOT NULL,
     email     VARCHAR(100) NOT NULL UNIQUE,
     senha     VARCHAR(20)  NOT NULL,
     telefone  CHAR(11),
